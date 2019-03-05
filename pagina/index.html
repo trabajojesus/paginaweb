@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/fontello.css">  
+    <link rel="stylesheet" href="css/estilo.css">
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/funciones.js"></script>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+          font-family: Arial;
+          margin: 0;
+          background: #f1f4f7;
+        }
+
+        /* Header/logo Title */
+        .encabezado {
+          padding: 30px;
+          text-align: center;
+          background: #f1f4f7;
+          color: black;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+          display: flex;
+          background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+          color: white;
+          padding: 14px 20px;
+          text-decoration: none;
+          text-align: center;
+
+        }
+        .navbar label {
+            color: white;
+            padding: 14px 10px;
+            text-decoration: none;
+            float: left;
+            font-size: 30px;
+            /*margin: 6px 0;*/
+            cursor: pointer;
+        }
+
+        /* Change color on hover */
+        .navbar label:hover {
+          background-color: #2e6da4;
+          color: white;
+        }
+        .navMenu a:hover {
+          background-color: #30a5ff;
+          color: #fff;
+        }
+        .nav > li > a:hover,
+        .nav >ul > li>a:focus {
+  text-decoration: none;
+  background-color: #39c;
+}
+        #icono{
+            padding: 0;
+            margin: 0;
+        }
+        #menu-bar{
+            display: none;
+        }
+        .icon-menu{
+            display: none;
+        }
+
+        /* Column container */
+        .contenido {  
+          display: flex;
+          flex-wrap: wrap;
+          background: #f1f4f7;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .menu {
+          flex: 5%;
+          background-color: #fff;
+          padding: 0;
+        margin: 0;
+        }
+        
+        .navMenu {
+            width: 100%;
+             bottom: 0;
+            margin: 0;
+            /*position: absolute;
+            top: 50px;
+            left: 0;
+            height: 100vh;
+            background: rgba(51,51,51,0.9);
+            transition: all 0.5s;
+            transform: translateX(0%);*/
+        }
+
+        .navMenu a {
+            display: block;
+            color: #666;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 20px;
+           /* border-bottom: 2px solid rgba(255, 0, 0, 0.2);*/
+        }
+
+        .navMenu li:hover {
+            background: rgba(255,255,255,255);
+        }
+
+        /* Main column */
+        .main {
+          flex: 70%;
+          background: #f1f4f7;
+          border:none;
+        }
+
+        iframe{
+            width: 100%;
+            height: 80vh;
+            background: #f1f4f7;
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+          padding: 20px;
+          text-align: center;
+          background: #ddd;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+            .menu {   
+                position: absolute;
+                display: none;
+                width: 100%;
+            
+            }
+            .icon-menu{
+                display: block;
+            }
+        }
+        @media (min-width:1024px) {
+            .menu {
+          flex: 5%;
+          padding: 0;
+                
+        }
+            .icon-menu{
+                display: block;
+            }
+        }
+        
+        .nav>li>a {
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+        }
+    </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="encabezado">
+          <h1>Sistema de Evaluacion</h1>
+        </header>
+
+        <!-- Navigation Bar -->
+        <secion class="navbar">
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
+            <label class="icon-home" id="inicio"></label>
+        </secion>
+
+        <!-- The flexible grid (content) -->
+        <secion class="contenido">
+          <secion class="menu">
+            <nav class="navMenu">
+                <ul style="    padding-left: 0;">
+                    <li><a href="altaInstrumento.html" target="mostracontenido">Alta Instrumento</a></li>
+                    <li><a href="https://desarrolloweb.com/articulos/795.php" target="mostracontenido">pupilo</a></li>
+                    <li><a href="">inicio</a></li>
+                    <li><a href="">inicio</a></li>
+                </ul>
+            </nav>
+          </secion>
+          <secion class="main">
+            <iframe src="altaInstrumento.html" name="mostracontenido">
+                <p>Su navegador no soporta este contenido</p>
+              </iframe>
+          </secion>
+        </secion>
+
+        <!-- Footer -->
+        <div class="footer">
+          <h2>Footer</h2>
+        </div>
+
+    </body>
+</html>
